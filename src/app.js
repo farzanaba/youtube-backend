@@ -18,6 +18,13 @@ app.use(express.urlencoded({extended: true})) // space is equal to %20 convert
 app.use(cookieParser())
 app.use(express.static("public"))
 
+// routes imports
+
+import userRouter from "./routes/user.routes.js"
+
+// declaration for routes
+app.use("/api/v1/users", userRouter)
+
 
 
 export { app }
